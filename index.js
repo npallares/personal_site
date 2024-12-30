@@ -2,7 +2,6 @@
 AOS.init();
 
 window.addEventListener("load", () => {
-   // console.log("hola")
   // Note: if the browser is able to cache the page, `event.persisted`
   // is `true`, and the state is frozen rather than terminated.
 });
