@@ -2,13 +2,13 @@
 AOS.init();
 
 window.addEventListener("load", () => {
-   // console.log("hola")
   // Note: if the browser is able to cache the page, `event.persisted`
   // is `true`, and the state is frozen rather than terminated.
 });
 
 
 var lastScrollTop = 0;
+const $body = document.getElementById("body")
 const $nav = document.getElementById("nav")
 const $nombre = document.getElementById("nombre")
 const $apellido = document.getElementById("apellido")
@@ -27,6 +27,7 @@ const $divMsj = document.getElementById("divMsj")
 
 $hamburger.addEventListener("click",()=>{
     if($ul.classList.contains("isActive")){
+        $body.classList.remove("notScroll")
         $ul.classList.remove("isActive")
 
         windows.addEventListener("scroll",function(){})
@@ -34,6 +35,7 @@ $hamburger.addEventListener("click",()=>{
         
     }else{
         $ul.classList.add("isActive")
+        $body.classList.add("notScroll")
         
     }
 })
@@ -42,8 +44,10 @@ $navItem.forEach(element => {
     element.addEventListener("click",()=>{
         if($ul.classList.contains("isActive")){
             $ul.classList.remove("isActive")
+            $body.classList.remove("notScroll")
         }else{
             $ul.classList.add("isActive")
+            $body.classList.add("notScroll")
         }
     })
 });

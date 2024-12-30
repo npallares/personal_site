@@ -252,6 +252,11 @@ img{
     font-family: 'Montserrat', sans-serif;
 }
 
+.notScroll{
+   overflow: hidden;
+  position: fixed
+}
+
 
 /*--------------------- Home ---------------------*/
 
@@ -1148,7 +1153,6 @@ img{
         justify-content: center;
         flex-wrap: wrap;
         height: auto;
-        margin-left: 5%;
         margin-right: 5%;
         width: 90%;
         padding-top: -1rem;
